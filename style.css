@@ -10,8 +10,9 @@ body {
   );
 }
 .cont {
-  width: 1800px;
+  width: 1440px;
   padding: 50px 80px;
+  margin: 0 auto;
 }
 li {
   list-style: none;
@@ -25,7 +26,7 @@ li {
 }
 .list {
   display: flex;
-  gap: 50px;
+  gap: 70px;
   flex-wrap: wrap;
 }
 .title {
@@ -43,14 +44,39 @@ li {
   border-radius: 8px;
   padding-bottom: 30px;
 
-  background-image: linear-gradient( 110.1deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% );
+  background-image: linear-gradient(
+    110.1deg,
+    rgba(30, 2, 83, 1) 44.2%,
+    rgba(198, 55, 160, 1) 138.2%
+  );
 }
+.card:hover {
+  transition: all 0.3s linear;
+  box-shadow: -5px -5px 30px 5px rgb(255, 0, 0), 5px 5px 30px 5px blue;
+}
+.card:active {
+  transition: all 0.1s linear;
+  box-shadow: -5px -5px 30px 5px rgb(255, 0, 191),
+    5px 5px 30px 5px rgb(68, 135, 223);
+}
+.card:focus {
+  transition: all 0.1s linear;
+  box-shadow: -5px -5px 30px 5px rgb(255, 0, 191),
+    5px 5px 30px 5px rgb(68, 135, 223);
+  background: linear-gradient(
+    270deg,
+    rgb(152, 94, 28),
+    rgb(17, 61, 232) 47%,
+    rgb(191, 51, 51) 96%
+  );
+}
+
 .img {
   width: 300px;
   border-radius: 8px;
 }
 .btn {
-  margin: px;
+  margin: 10px;
   padding: 10px 20px;
   width: 120px;
   border-radius: 8px;
@@ -60,6 +86,27 @@ li {
   background-color: blueviolet;
 }
 .btn:hover {
-  background-color: blue;
-  transition: all 0.3s linear;
+  background-image: linear-gradient(
+    110.1deg,
+    rgb(56, 16, 130) 44.2%,
+    rgba(198, 55, 160, 1) 138.2%
+  );
+  transition: all 0.8s linear;
+}
+@media only screen and (max-width: 400px) {
+  .cont {
+    max-width: 300px;
+    padding: 50px 40px;
+  }
+  .text {
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px;
+  }
+  .list {
+    flex-direction: column;
+    gap: 80px;
+  }
 }

@@ -52465,33 +52465,4 @@ var movies = [
   },
 ];
 
-let elList = document.querySelector("#list");
 
-let renderMovies = function (movie) {
-  let eLItem = document.createElement("li");
-  let card = `
-
-  <div class=" w-25 card mb-5">
-        <img class="img" width="w-25" height="200" src="${movie.bigPoster}" alt="img" />
-        <div class="card-body">
-          <h1 class="title">${movie.title}</h1>
-          <p class="text text-truncate ">
-          ${movie.summary}
-          </p>
-          <a class="btn btn-primary" href="">Treiler ko'rish</a>
-        </div>
-      </div>
-
-
-
-  `;
-  eLItem.innerHTML = card;
-  elList.appendChild(eLItem);
-};
-
-let main = function (movies, limits = movies.length) {
-  for (let i = 0; i < limits; i++) {
-    renderMovies(movies[i]);
-  }
-};
-main(movies, 100);
