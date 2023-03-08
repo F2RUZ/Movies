@@ -44,4 +44,4 @@ let main = function (movies, limits = movies.length) {
     renderMovies(movieObj);
   }
 };
-main(movies, 20);
+main(movies, 200);
